@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 # A simple Password generator. Central parts are based on 
 # http://snippets.dzone.com/posts/show/2137 and comments.
 class Password
