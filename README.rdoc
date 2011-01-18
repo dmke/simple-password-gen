@@ -1,0 +1,34 @@
+== Simple password generator
+
+This class will generate either a pronouncable or complete random
+password.
+
+== Example
+
+You may +require+ this file and generate some password, like:
+
+  require '.../passwd-gen.rb'
+  puts Password.pronouncable # => "nduslihefrash"
+  puts Password.random(4)    # => "w'ds"
+  pw = Password.new (1..10)  # => #<Password:0x9678514 ...>
+  pw.pronouncable            # => "t"
+  pw.pronouncable            # => "vostyhish"
+  pw.random                  # => "8+a"
+  ...
+
+== Synopsis
+
+Alternatively, you may simply run this file as commandline application:
+
+  $ ruby passwd-gen.rb -h
+  passwd-gen.rb [--length/-l len] [--number/-n num]
+    Generates <n> password(s) with appox. length <len>.
+    Will fail if n is less than 1 or len is less than 5.
+    Defaults: length=10, number=3
+
+== Author
+Dominik Menke, <tt>dmke(at)tzi(dot)org</tt>
+
+== License
+Simplified BSD License
+

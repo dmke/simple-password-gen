@@ -1,0 +1,4 @@
+html/*
+pkg/*
+*.gem
+.bundle
