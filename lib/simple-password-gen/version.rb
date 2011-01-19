@@ -1,8 +1,8 @@
 # encoding: utf-8
 
 class Password
-  MAJOR = "0"
-  MINOR = "1"
-  PATCH = "3"
-  VERSION = [MAJOR, MINOR, PATCH].join '.'
+  MAJOR = 0 # :nodoc:
+  MINOR = 1 # :nodoc:
+  PATCH = 4 # :nodoc:
+  VERSION = [MAJOR, MINOR, PATCH].join '.' # :nodoc:
 end
