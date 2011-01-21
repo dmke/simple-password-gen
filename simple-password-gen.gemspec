@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email       = ["dmke@tzi.de"]
   s.homepage    = "http://github.org/dmke/simple-password-gen"
   s.summary     = %q{Simple password generator to create pronounceable or random passowords.}
-  s.description = s.summary + %Q{\n\nThis gem comes with an executable and might also be required.}
+  s.description = s.summary + "\n\nThis gem comes with an executable and might also be required."
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
