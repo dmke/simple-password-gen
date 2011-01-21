@@ -33,8 +33,10 @@ Alternatively, you may simply run this file as commandline application:
     Defaults: length=10, number=3
 
 == Author
+
 Dominik Menke, <tt>dmke(at)tzi(dot)org</tt>
 
 == License
-Simplified BSD License
+
+Simplified BSD License. See the file LICENSE.
 
