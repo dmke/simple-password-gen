@@ -8,7 +8,7 @@ class Password
   # vowels and sound-alike +y+
   VOWELS = %w(a e i o u y)
   # some characters
-  CHARS = (('a'..'z').to_a + ('0'..'9').to_a + "%&/()[]!\"§$,.-;:_#'+*?".split(//u)) - "io01lO".split(//u)
+  CHARS = (('A'..'Z').to_a + ('a'..'z').to_a + ('0'..'9').to_a + "%&/()[]!\"§$,.-;:_#'+*?".split(//u)) - "io01lO".split(//u)
 
   # Creates a new password generator. The length +len+ might be an
   # +Integer+ or a +Range+.
