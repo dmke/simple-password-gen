@@ -11,7 +11,7 @@ Simply install the generator with Rubygems:
 
 == Example
 
-You may +require+ this file and generate some password, like:
+You may +require+ this file and generate some passwords, like:
 
   require 'simple-password-gen'
   puts Password.pronounceable # => "nduslihefrash"
@@ -24,7 +24,7 @@ You may +require+ this file and generate some password, like:
 
 == Synopsis
 
-Alternatively, you may simply run this file as commandline application:
+Alternatively, you may simply run this file as command line application:
 
   $ simple-password-gen -h
   simple-password-gen [--length/-l len] [--number/-n num]
@@ -32,9 +32,11 @@ Alternatively, you may simply run this file as commandline application:
     Will fail if n is less than 1 or len is less than 5.
     Defaults: length=10, number=3
 
-== Author
+== Author and Contributors
 
-Dominik Menke, <tt>dmke(at)tzi(dot)org</tt>
+Written by Dominik Menke, <tt>dmke(at)tzi(dot)org</tt>
+
+Some typo fixes by @tanraya (Andrew).
 
 == License
 
