@@ -2,3 +2,4 @@ html/*
 pkg/*
 *.gem
 .bundle
+.ruby-*

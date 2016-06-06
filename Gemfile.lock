@@ -1,0 +1,17 @@
+PATH
+  remote: .
+  specs:
+    simple-password-gen (0.1.5)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  simple-password-gen!
+
+BUNDLED WITH
+   1.12.5
