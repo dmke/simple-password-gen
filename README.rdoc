@@ -27,14 +27,14 @@ You may +require+ this file and generate some passwords, like:
 Alternatively, you may simply run this file as command line application:
 
   $ simple-password-gen -h
-  simple-password-gen [--length/-l len] [--number/-n num]
-    Generates <n> password(s) with appox. length <len>.
-    Will fail if n is less than 1 or len is less than 5.
-    Defaults: length=10, number=3
+  simple-password-gen [--length/-l LEN] [--number/-n NUM]
+    Generates <NUM> password(s) with appox. length <LEN>.
+    Will fail if NUM is less than 1 or LEN is less than 5.
+    Defaults: LEN=10, NUM=3
 
 == Author and Contributors
 
-Written by Dominik Menke, <tt>dmke(at)tzi(dot)org</tt>
+Written by Dominik Menke, <tt>dominik(dot)menke(at)gmail(dot)com</tt>
 
 Some typo fixes by @tanraya (Andrew).
 
