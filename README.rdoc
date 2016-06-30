@@ -15,6 +15,8 @@ You may +require+ this file and generate some passwords, like:
 
   require 'simple-password-gen'
   puts Password.pronounceable # => "nduslihefrash"
+  puts Password.pronounceable(3) # => "ndu"
+  puts Password.pronounceable(5, visually_safe: true) # => "ukaje"
   puts Password.random(4)     # => "w'ds"
   pw = Password.new (1..10)   # => #<Password:0x9678514 ...>
   pw.pronounceable            # => "t"
