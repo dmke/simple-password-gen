@@ -6,7 +6,7 @@ class Password
   module CharacterSets
     SAFE_CHARS  = ("A".."Z").to_a | ("a".."z").to_a | ("0".."9").to_a | "-_.,;+!*()[]{}|~^<>\"'$=".split(//)
     URL_UNSAFE  = "#%/:@&?".split(//)
-    LOOKALIKE   = "|io01lO".split(//)
+    LOOKALIKE   = "Ss5Bb8|Iio01lO".split(//)
 
     ALL_CHARS   = SAFE_CHARS | URL_UNSAFE
     URL_SAFE    = SAFE_CHARS
