@@ -6,14 +6,16 @@ class Password
   module CharacterSets
     SAFE_CHARS  = ("A".."Z").to_a | ("a".."z").to_a | ("0".."9").to_a | "-_.,;+!*()[]{}|~^<>\"'$=".split(//)
     URL_UNSAFE  = "#%/:@&?".split(//)
-    LOOKALIKE   = "|io01lO".split(//)
+    LOOKALIKE   = "Ss5Bb8|Iio01lO".split(//)
 
     ALL_CHARS   = SAFE_CHARS | URL_UNSAFE
     URL_SAFE    = SAFE_CHARS
     VISUAL_SAFE = SAFE_CHARS - LOOKALIKE
 
     CONSONANTS  = %w( b c d f g h j k l m n p r s t v w x z)
+    VISUAL_SAFE_CONSONANTS = CONSONANTS & VISUAL_SAFE
     VOWELS      = %w(a     e     i         o       u     y)
+    VISUAL_SAFE_VOWELS = VOWELS & VISUAL_SAFE
     COMPOUND    = CONSONANTS | %w(ch cr fr nd ng nk nt ph pr qu rd sch sh sl sp st th tr)
   end
 
@@ -32,8 +34,8 @@ class Password
 
   class << self
     # Short-hand for +#new.pronouncable+.
-    def pronounceable(len = DEFAULT_LENGTH)
-      new(len).pronounceable
+    def pronounceable(len = DEFAULT_LENGTH, visual_safe: false)
+      new(len).pronounceable(visual_safe: visual_safe)
     end
 
     # Short-hand for +#new.random+.
@@ -48,12 +50,24 @@ class Password
   end
 
   # Generates a pronounceable password.
-  def pronounceable
+  def pronounceable(visual_safe:)
     set = rand > 0.5
+
+    consonants = if visual_safe
+                   CharacterSets::VISUAL_SAFE_CONSONANTS
+                 else
+                   CharacterSets::CONSONANTS
+                 end
+
+    vowels = if visual_safe
+               CharacterSets::VISUAL_SAFE_VOWELS
+             else
+               CharacterSets::VOWELS
+             end
 
     build_password {
       set = !set
-      set ? CharacterSets::CONSONANTS.sample : CharacterSets::VOWELS.sample
+      set ? consonants.sample : vowels.sample
     }
   end
 
