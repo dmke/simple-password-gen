@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    simple-password-gen (0.1.5)
+    simple-password-gen (0.2.0.alpha)
 
 GEM
   remote: http://rubygems.org/
